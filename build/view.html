@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style/normalize.css">
+  <link rel="stylesheet" href="/style/prism.css">
+  <link rel="stylesheet" href="/style/view.css">
+  <title></title>
+</head>
+<body>
+  <div id="WRAPPER" class="wrapper code tree">
+    <header class="header">
+      <div class="controls-group">
+        <div class="controls">
+          <label class="button-wrap">
+            <input type="checkbox" id="TREE_CONTROL">
+            <div class="button">
+              <img src="/icons/root-directory.svg" alt="">
+            </div>
+          </label>
+          <label class="button-wrap">
+            <input type="checkbox" id="CODE_CONTROL">
+            <div class="button">
+              <img src="/icons/code.svg" alt="">
+            </div>
+          </label>
+        </div>
+        <form class="controls" id="VIEWPORT_CONTROLS">
+          <label class="button-wrap">
+            <input type="radio" name="viewport" checked value="xs">
+            <div class="button">XS</div>
+          </label>
+          <label class="button-wrap">
+            <input type="radio" name="viewport" value="sm">
+            <div class="button">SM</div>
+          </label>
+          <label class="button-wrap">
+            <input type="radio" name="viewport" value="md">
+            <div class="button">MD</div>
+          </label>
+          <label class="button-wrap">
+            <input type="radio" name="viewport" value="lg">
+            <div class="button">LG</div>
+          </label>
+          <label class="button-wrap">
+            <input type="radio" name="viewport" value="xl">
+            <div class="button">XL</div>
+          </label>
+        </form>
+      </div>
+      <h1 class="page-title"><a href="" target="_blank" id="PAGE_TITLE"></a></h1>
+    </header>
+
+    <div class="content" style="visibility: hidden">
+      <div class="tree-view">
+        <div id="TREE"></div>
+      </div>
+  
+      <div class="code-view">
+        <pre class="language-pug"><code class="language-pug" id="CODE"></code></pre>
+      </div>
+      
+      <div class="frame-view">
+        <iframe id="PAGE_FRAME" src=""></iframe>
+      </div>
+    </div>
+  </div>
+  <script src="/script/script.js"></script>
+</body>
+</html>

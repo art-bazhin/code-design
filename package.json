@@ -1,0 +1,24 @@
+{
+  "name": "code-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "cheerio": "^1.0.0-rc.3",
+    "glob": "^7.1.4",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-pug": "^4.0.1"
+  },
+  "dependencies": {
+    "@types/node": "^12.0.2",
+    "prismjs": "^1.16.0"
+  }
+}

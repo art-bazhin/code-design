@@ -1,0 +1,16 @@
+mixin button(opts = {})
+  -
+    var DEFAULTS = {
+      color: 'brand',
+      type: 'solid'
+    }
+
+    opts = Object.assign({}, DEFAULTS, opts);
+
+  case opts.type
+    when 'solid'
+      button.text-white.px-sm.py-xs.border.rounded(type="button" class=`bg-${opts.color} hover_bg-${opts.color}-lg border-${opts.color} hover_border-${opts.color}-lg`)
+        block
+    when 'hollow'
+      button.px-sm.py-xs.border.rounded(type="button" class=`hover_bg-${opts.color}-xxs border-${opts.color} text-${opts.color}`)
+        block

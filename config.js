@@ -1,3 +1,3 @@
 module.exports = {
-  cssPath: '/assets/style.min.css'
+  cssPath: '/assets/style.carbon.css'
 }

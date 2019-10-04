@@ -1,0 +1,36 @@
+mixin checkbox(props = {})
+  -
+    const DEFAULTS = {
+      label: 'Checkbox label',
+      options: [
+        {
+          label: 'Checkbox option',
+          disabled: false,
+          checked: false,
+          indeterminate: false
+        }
+      ]
+    }
+
+    props = Object.assign({}, DEFAULTS, props);
+
+  fieldset.bx--fieldset
+    legend.bx--label #{ props.label }
+
+    each option in props.options
+      -
+        const id = 'checkbox-' + Math.random().toString(36).substr(2);
+
+      div.bx--form-item.bx--checkbox-wrapper
+        input(
+          id=id
+          type="checkbox"
+          checked=option.checked
+          value=id
+          disabled=option.disabled
+        ).bx--checkbox
+        label(
+          for=id
+          data-contained-checkbox-state=(option.indeterminate ? 'mixed' : false)
+        ).bx--checkbox-label #{option.label}
+

@@ -1,16 +1,15 @@
-mixin button(opts = {})
+mixin button(props = {})
   -
     var DEFAULTS = {
-      color: 'brand',
-      type: 'solid'
+      type: 'primary',
+      size: '',
+      disabled: false
     }
 
-    opts = Object.assign({}, DEFAULTS, opts);
+    props = Object.assign({}, DEFAULTS, props);
 
-  case opts.type
-    when 'solid'
-      button.text-white.px-sm.py-xs.border.rounded(type="button" class=`bg-${opts.color} hover_bg-${opts.color}-lg border-${opts.color} hover_border-${opts.color}-lg`)
-        block
-    when 'hollow'
-      button.px-sm.py-xs.border.rounded(type="button" class=`hover_bg-${opts.color}-xxs border-${opts.color} text-${opts.color}`)
-        block
+  button(
+    type="button" 
+    class=`bx--btn bx--btn--${props.type} bx--btn--${props.size}`
+    disabled=props.disabled
+  ): block

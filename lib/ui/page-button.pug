@@ -2,39 +2,17 @@ include /core.pug
 include /ui/button.pug
 
 +page
-  .pb-sm
+  .l-stack-m.l-flex-top
     +button Click Me
 
-  .pb-sm
-    +button({ color: 'info' }) Click Me
+    +button({ type: 'secondary' }) Click Me
 
-  .pb-sm
-    +button({ color: 'danger' }) Click Me
+    +button({ type: 'tertiary' }) Click Me
 
-  .pb-sm
-    +button({ color: 'warning' }) Click Me
+    +button({ type: 'ghost' }) Click Me
 
-  .pb-sm
-    +button({ color: 'success' }) Click Me
+    +button({ type: 'danger' }) Click Me
 
-  .pb-sm
-    +button({ color: 'base' }) Click Me
+    +button({ size: 'sm' }) Click Me
 
-  .pb-sm
-    +button({ type: 'hollow' }) Click Me
-
-  .pb-sm
-    +button({ type: 'hollow', color: 'info' }) Click Me
-  
-  .pb-sm
-    +button({ type: 'hollow', color: 'danger' }) Click Me
-
-  .pb-sm
-    +button({ type: 'hollow', color: 'warning' }) Click Me
-
-  .pb-sm
-    +button({ type: 'hollow', color: 'success' }) Click Me
-
-  .pb-sm
-    +button({ type: 'hollow', color: 'base' }) Click Me
-
+    +button({ disabled: true }) Click Me

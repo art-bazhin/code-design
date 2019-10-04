@@ -1,0 +1,24 @@
+include /core.pug
+include /ui/checkbox.pug
+
++page
+  +checkbox({
+    label: 'Checkbox example',
+    options: [
+      {
+        label: 'First option'
+      },
+      {
+        label: 'Second option',
+        disabled: true
+      },
+      {
+        label: 'Third option',
+        checked: true
+      },
+      {
+        label: 'Fourth option',
+        indeterminate: true
+      }
+    ]
+  })
